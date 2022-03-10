@@ -13,7 +13,7 @@
 import UIKit
 
 // MARK: - DELEGATION
-protocol ___VARIABLE_sceneName___Delegate: class {
+protocol ___VARIABLE_sceneName___Delegate: AnyObject {
 }
 
 // MARK: - ROUTING LOGIC

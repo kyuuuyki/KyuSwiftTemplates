@@ -14,7 +14,7 @@ import UIKit
 import KyuGenericExtensions
 
 // MARK: - DISPLAY LOGIC
-protocol ___VARIABLE_sceneName___DisplayLogic: class {
+protocol ___VARIABLE_sceneName___DisplayLogic: AnyObject {
     func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel)
 }
 
