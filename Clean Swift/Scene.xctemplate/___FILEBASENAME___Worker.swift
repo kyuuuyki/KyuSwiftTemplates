@@ -12,17 +12,15 @@
 
 import UIKit
 
-enum ___VARIABLE_sceneName___Model {
+// MARK: - WORKER LOGIC
+protocol I___VARIABLE_sceneName___Worker {
+    func doSomeWork()
+}
+
+// MARK: - WORKER
+class ___VARIABLE_sceneName___Worker: I___VARIABLE_sceneName___Worker {
     
-    // MARK: - DO SOMETHING
-    enum Something {
-        struct Request {
-        }
-        
-        struct Response {
-        }
-        
-        struct ViewModel {
-        }
+    // MARK: GET - SOMETHING
+    func doSomeWork() {
     }
 }

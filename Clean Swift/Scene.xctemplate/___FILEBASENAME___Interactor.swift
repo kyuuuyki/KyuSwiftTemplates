@@ -12,23 +12,20 @@
 
 import UIKit
 
-// MARK: - BUSINESS LOGIC
-protocol ___VARIABLE_sceneName___BusinessLogic {
-    
-    func doSomething(request: ___VARIABLE_sceneName___Model.Something.Request)
-}
-
 // MARK: - DATASTORE
 protocol ___VARIABLE_sceneName___DataStore {
-    
     //var name: String { get set }
 }
 
+// MARK: - BUSINESS LOGIC
+protocol I___VARIABLE_sceneName___Interactor {
+    func doSomething(request: ___VARIABLE_sceneName___Model.Something.Request)
+}
+
 // MARK: - INTERACTOR
-class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic, ___VARIABLE_sceneName___DataStore {
-    
-    var presenter: ___VARIABLE_sceneName___PresentationLogic?
-    var worker: ___VARIABLE_sceneName___Worker?
+class ___VARIABLE_sceneName___Interactor: I___VARIABLE_sceneName___Interactor, ___VARIABLE_sceneName___DataStore {
+    var presenter: I___VARIABLE_sceneName___Presenter?
+    var worker: I___VARIABLE_sceneName___Worker?
     
     // MARK: MODEL
     //var name: String = ""
@@ -36,9 +33,7 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic,
 
 // MARK: - DO SOMETHING
 extension ___VARIABLE_sceneName___Interactor {
-    
     func doSomething(request: ___VARIABLE_sceneName___Model.Something.Request) {
-        
         worker = ___VARIABLE_sceneName___Worker()
         worker?.doSomeWork()
         

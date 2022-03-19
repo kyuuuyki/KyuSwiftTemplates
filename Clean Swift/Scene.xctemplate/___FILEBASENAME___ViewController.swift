@@ -11,17 +11,16 @@
 //
 
 import UIKit
-import KyuGenericExtensions
 
 // MARK: - DISPLAY LOGIC
-protocol ___VARIABLE_sceneName___DisplayLogic: AnyObject {
+protocol I___VARIABLE_sceneName___ViewController: AnyObject {
     func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel)
 }
 
 // MARK: - VIEW CONTROLLER
-class ___VARIABLE_sceneName___ViewController: UITableViewController, ___VARIABLE_sceneName___DisplayLogic {
-    var interactor: ___VARIABLE_sceneName___BusinessLogic?
-    var router: (NSObjectProtocol & ___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
+class ___VARIABLE_sceneName___ViewController: UIViewController, I___VARIABLE_sceneName___ViewController {
+    var interactor: I___VARIABLE_sceneName___Interactor?
+    var router: (NSObjectProtocol & I___VARIABLE_sceneName___Router & ___VARIABLE_sceneName___DataPassing)?
     
     // MARK: OBJECT LIFECYCLE
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -89,11 +88,4 @@ extension ___VARIABLE_sceneName___ViewController {
     
     func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel) {
     }
-}
-
-// MARK: - STORYBOARD INSTANTIABLE
-extension ___VARIABLE_sceneName___ViewController: StoryboardInstantiable {
-    static var storyboardBundle: Bundle { return Bundle(for: ___VARIABLE_sceneName___ViewController.self) }
-    static var storyboardName: String { return "Main" }
-    static var storyboardIdentifier: String { return "___VARIABLE_sceneName___View" }
 }

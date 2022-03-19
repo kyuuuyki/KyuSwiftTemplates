@@ -14,57 +14,46 @@
 import XCTest
 
 // MARK: - PRESENTER
-class ___VARIABLE_sceneName___PresenterTests: XCTestCase
-{
-  // MARK: Subject under test
-  
-  var sut: ___VARIABLE_sceneName___Presenter!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setup___VARIABLE_sceneName___Presenter()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setup___VARIABLE_sceneName___Presenter()
-  {
-    sut = ___VARIABLE_sceneName___Presenter()
-  }
-  
-  // MARK: Test doubles
-  
-  class ___VARIABLE_sceneName___DisplayLogicSpy: ___VARIABLE_sceneName___DisplayLogic
-  {
-    var displaySomethingCalled = false
+class ___VARIABLE_sceneName___PresenterTests: XCTestCase {
     
-    func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel)
-    {
-      displaySomethingCalled = true
+    // MARK: SUBJECT UNDER TEST
+    var sut: ___VARIABLE_sceneName___Presenter!
+    
+    // MARK: TEST LIFECYCLE
+    override func setUp() {
+        super.setUp()
+        setup___VARIABLE_sceneName___Presenter()
     }
-  }
-  
-  // MARK: Tests
-  
-  func testPresentSomething()
-  {
-    // Given
-    let spy = ___VARIABLE_sceneName___DisplayLogicSpy()
-    sut.viewController = spy
-    let response = ___VARIABLE_sceneName___Model.Something.Response()
     
-    // When
-    sut.presentSomething(response: response)
+    override func tearDown() {
+        super.tearDown()
+    }
     
-    // Then
-    XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
-  }
+    // MARK: TEST SETUP
+    func setup___VARIABLE_sceneName___Presenter() {
+        sut = ___VARIABLE_sceneName___Presenter()
+    }
+    
+    // MARK: TEST DOUBLES
+    class ___VARIABLE_sceneName___ViewControllerSpy: I___VARIABLE_sceneName___ViewController {
+        var displaySomethingCalled = false
+        
+        func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel) {
+            displaySomethingCalled = true
+        }
+    }
+    
+    // MARK: TESTS
+    func testPresentSomething() {
+        // Given
+        let spy = ___VARIABLE_sceneName___ViewControllerSpy()
+        sut.viewController = spy
+        let response = ___VARIABLE_sceneName___Model.Something.Response()
+        
+        // When
+        sut.presentSomething(response: response)
+        
+        // Then
+        XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
+    }
 }

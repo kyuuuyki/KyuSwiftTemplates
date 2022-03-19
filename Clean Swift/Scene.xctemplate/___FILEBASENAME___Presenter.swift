@@ -13,13 +13,13 @@
 import UIKit
 
 // MARK: - PRESENTATION LOGIC
-protocol ___VARIABLE_sceneName___PresentationLogic {
+protocol I___VARIABLE_sceneName___Presenter {
     func presentSomething(response: ___VARIABLE_sceneName___Model.Something.Response)
 }
 
 // MARK: - PRESENTER
-class ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresentationLogic {
-    weak var viewController: ___VARIABLE_sceneName___DisplayLogic?
+class ___VARIABLE_sceneName___Presenter: I___VARIABLE_sceneName___Presenter {
+    weak var viewController: I___VARIABLE_sceneName___ViewController?
 }
 
 // MARK: - DO SOMETHING

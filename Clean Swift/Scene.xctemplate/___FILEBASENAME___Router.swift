@@ -17,7 +17,7 @@ protocol ___VARIABLE_sceneName___Delegate: AnyObject {
 }
 
 // MARK: - ROUTING LOGIC
-@objc protocol ___VARIABLE_sceneName___RoutingLogic {
+@objc protocol I___VARIABLE_sceneName___Router {
 //    func performSegueToSomewhere(segue: UIStoryboardSegue?)
 }
 
@@ -28,10 +28,10 @@ protocol ___VARIABLE_sceneName___DataPassing {
 }
 
 // MARK: - ROUTER
-class ___VARIABLE_sceneName___Router: NSObject, ___VARIABLE_sceneName___RoutingLogic, ___VARIABLE_sceneName___DataPassing {
-    weak var viewController: ___VARIABLE_sceneName___ViewController?
-    weak var delegate: ___VARIABLE_sceneName___Delegate?
+class ___VARIABLE_sceneName___Router: NSObject, I___VARIABLE_sceneName___Router, ___VARIABLE_sceneName___DataPassing {
+    weak var viewController: I___VARIABLE_sceneName___ViewController?
     
+    weak var delegate: ___VARIABLE_sceneName___Delegate?
     var dataStore: ___VARIABLE_sceneName___DataStore?
 
     // MARK: ROUTING

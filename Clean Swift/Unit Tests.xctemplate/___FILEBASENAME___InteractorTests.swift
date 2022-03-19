@@ -14,57 +14,46 @@
 import XCTest
 
 // MARK: - INTERACTOR
-class ___VARIABLE_sceneName___InteractorTests: XCTestCase
-{
-  // MARK: Subject under test
-  
-  var sut: ___VARIABLE_sceneName___Interactor!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setup___VARIABLE_sceneName___Interactor()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setup___VARIABLE_sceneName___Interactor()
-  {
-    sut = ___VARIABLE_sceneName___Interactor()
-  }
-  
-  // MARK: Test doubles
-  
-  class ___VARIABLE_sceneName___PresentationLogicSpy: ___VARIABLE_sceneName___PresentationLogic
-  {
-    var presentSomethingCalled = false
+class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
     
-    func presentSomething(response: ___VARIABLE_sceneName___Model.Something.Response)
-    {
-      presentSomethingCalled = true
+    // MARK: SUBJECT UNDER TEST
+    var sut: ___VARIABLE_sceneName___Interactor!
+    
+    // MARK: TEST LIFECYCLE
+    override func setUp() {
+        super.setUp()
+        setup___VARIABLE_sceneName___Interactor()
     }
-  }
-  
-  // MARK: Tests
-  
-  func testDoSomething()
-  {
-    // Given
-    let spy = ___VARIABLE_sceneName___PresentationLogicSpy()
-    sut.presenter = spy
-    let request = ___VARIABLE_sceneName___Model.Something.Request()
     
-    // When
-    sut.doSomething(request: request)
+    override func tearDown() {
+        super.tearDown()
+    }
     
-    // Then
-    XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
-  }
+    // MARK: TEST SETUP
+    func setup___VARIABLE_sceneName___Interactor() {
+        sut = ___VARIABLE_sceneName___Interactor()
+    }
+    
+    // MARK: TEST DOUBLES
+    class ___VARIABLE_sceneName___PresenterSpy: I___VARIABLE_sceneName___Presenter {
+        var presentSomethingCalled = false
+        
+        func presentSomething(response: ___VARIABLE_sceneName___Model.Something.Response) {
+            presentSomethingCalled = true
+        }
+    }
+    
+    // MARK: TESTS
+    func testDoSomething() {
+        // Given
+        let spy = ___VARIABLE_sceneName___PresenterSpy()
+        sut.presenter = spy
+        let request = ___VARIABLE_sceneName___Model.Something.Request()
+        
+        // When
+        sut.doSomething(request: request)
+        
+        // Then
+        XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
+    }
 }
