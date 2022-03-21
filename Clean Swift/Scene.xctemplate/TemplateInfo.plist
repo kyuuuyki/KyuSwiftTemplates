@@ -34,6 +34,20 @@
 		</dict>
 		<dict>
 			<key>Default</key>
+			<string>___VARIABLE_sceneName:identifier___SceneModule</string>
+			<key>Description</key>
+			<string>The module name</string>
+			<key>Identifier</key>
+			<string>moduleName</string>
+			<key>Name</key>
+			<string>Module Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
 			<string>___VARIABLE_sceneName:identifier___ViewController</string>
 			<key>Description</key>
 			<string>The view controller name</string>
@@ -76,20 +90,6 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Router</string>
-			<key>Description</key>
-			<string>The router name</string>
-			<key>Identifier</key>
-			<string>routerName</string>
-			<key>Name</key>
-			<string>Router Name:</string>
-			<key>Required</key>
-			<true/>
-			<key>Type</key>
-			<string>static</string>
-		</dict>
-		<dict>
-			<key>Default</key>
 			<string>___VARIABLE_sceneName:identifier___Worker</string>
 			<key>Description</key>
 			<string>The worker name</string>
@@ -104,13 +104,27 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneName:identifier___Models</string>
+			<string>___VARIABLE_sceneName:identifier___Router</string>
 			<key>Description</key>
-			<string>The model file name</string>
+			<string>The router name</string>
 			<key>Identifier</key>
-			<string>modelFileName</string>
+			<string>routerName</string>
 			<key>Name</key>
-			<string>Model File Name:</string>
+			<string>Router Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_sceneName:identifier___Model</string>
+			<key>Description</key>
+			<string>The model name</string>
+			<key>Identifier</key>
+			<string>modelName</string>
+			<key>Name</key>
+			<string>Model Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>

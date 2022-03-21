@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		A028BA3D27E8CD6F00862509 /* ___FILEBASENAME___SceneModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___SceneModule.swift"; sourceTree = "<group>"; };
 		A07E69C1274A5ED900B12001 /* TemplateIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TemplateIcon@2x.png"; sourceTree = "<group>"; };
 		A07E69D1274A5ED900B12001 /* ___FILEBASENAME___Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___Presenter.swift"; sourceTree = "<group>"; };
 		A07E69D2274A5ED900B12001 /* ___FILEBASENAME___Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___Worker.swift"; sourceTree = "<group>"; };
 		A07E69D3274A5ED900B12001 /* ___FILEBASENAME___Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___Router.swift"; sourceTree = "<group>"; };
-		A07E69D4274A5ED900B12001 /* ___FILEBASENAME___Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___Models.swift"; sourceTree = "<group>"; };
+		A07E69D4274A5ED900B12001 /* ___FILEBASENAME___Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___Model.swift"; sourceTree = "<group>"; };
 		A07E69D5274A5ED900B12001 /* ___FILEBASENAME___ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___ViewController.swift"; sourceTree = "<group>"; };
 		A07E69D6274A5ED900B12001 /* ___FILEBASENAME___Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "___FILEBASENAME___Interactor.swift"; sourceTree = "<group>"; };
 		A07E69D7274A5ED900B12001 /* TemplateIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TemplateIcon.png; sourceTree = "<group>"; };
@@ -45,12 +46,13 @@
 		A07E69C0274A5ED900B12001 /* Scene.xctemplate */ = {
 			isa = PBXGroup;
 			children = (
+				A028BA3D27E8CD6F00862509 /* ___FILEBASENAME___SceneModule.swift */,
+				A07E69D5274A5ED900B12001 /* ___FILEBASENAME___ViewController.swift */,
+				A07E69D6274A5ED900B12001 /* ___FILEBASENAME___Interactor.swift */,
 				A07E69D1274A5ED900B12001 /* ___FILEBASENAME___Presenter.swift */,
 				A07E69D2274A5ED900B12001 /* ___FILEBASENAME___Worker.swift */,
 				A07E69D3274A5ED900B12001 /* ___FILEBASENAME___Router.swift */,
-				A07E69D4274A5ED900B12001 /* ___FILEBASENAME___Models.swift */,
-				A07E69D5274A5ED900B12001 /* ___FILEBASENAME___ViewController.swift */,
-				A07E69D6274A5ED900B12001 /* ___FILEBASENAME___Interactor.swift */,
+				A07E69D4274A5ED900B12001 /* ___FILEBASENAME___Model.swift */,
 				A07E69D7274A5ED900B12001 /* TemplateIcon.png */,
 				A07E69C1274A5ED900B12001 /* TemplateIcon@2x.png */,
 				A07E69D8274A5ED900B12001 /* TemplateInfo.plist */,
