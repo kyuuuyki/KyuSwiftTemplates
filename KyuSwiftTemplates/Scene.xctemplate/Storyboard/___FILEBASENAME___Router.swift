@@ -13,6 +13,5 @@ protocol ___VARIABLE_sceneName___RouterProtocol {
 
 // MARK: - ROUTER
 struct ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RouterProtocol {
-	weak var viewController: UIViewController?
-	var transitionCoordinator: TransitionCoordinatorProtocol
+	let transitionCoordinator: TransitionCoordinatorProtocol
 }
