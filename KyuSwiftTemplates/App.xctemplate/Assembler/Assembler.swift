@@ -10,7 +10,7 @@ import SwiftUI
 public final class Assembler: AssemblerProtocol {
 	// MARK: PUBLIC
 	public static func assembler() -> AssemblerProtocol {
-		return self.shared
+		self.shared
 	}
 	
 	public let container: ContainerProtocol = Container()
@@ -31,25 +31,24 @@ public extension Assembler {
 			TransitionCoordinatorProtocol.self,
 			name: TransitionCoordinator.moduleName
 		) { _ in
-			return TransitionCoordinator()
+			TransitionCoordinator()
 		}
 		
 		container.register(
 			SceneModuleProtocol.self,
 			name: ___VARIABLE_sceneName___SceneModule.moduleName
 		) { _ in
-			return ___VARIABLE_sceneName___SceneModule()
+			___VARIABLE_sceneName___SceneModule()
 		}
 	}
 	
 	func configureRootViewController(window: UIWindow?) {
-		guard let viewController = resolver.resolve(
-			SceneModuleProtocol.self,
-			name: ___VARIABLE_sceneName___SceneModule.moduleName
-		)?.build(resolver: resolver, parameters: nil)
-		else {
-			return
-		}
+		let viewController = try? resolver
+			.resolve(
+				SceneModuleProtocol.self,
+				name: ___VARIABLE_sceneName___SceneModule.moduleName
+			)
+			.build(resolver: resolver)
 		window?.rootViewController = viewController
 	}
 }

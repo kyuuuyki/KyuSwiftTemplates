@@ -89,6 +89,7 @@
 					</dict>
 					<key>Nodes</key>
 					<array>
+						<string>../.swiftlint.yml</string>
 						<string>AppDelegate.swift</string>
 						<string>SceneDelegate.swift</string>
 						<string>Assembler/Assembler.swift</string>
@@ -106,6 +107,11 @@
 					</array>
 					<key>Definitions</key>
 					<dict>
+						<key>../.swiftlint.yml</key>
+						<dict>
+							<key>Path</key>
+							<string>.swiftlint.yml</string>
+						</dict>
 						<key>Base.lproj/Main.storyboard</key>
 						<dict>
 							<key>Path</key>
@@ -234,6 +240,7 @@
 					</dict>
 					<key>Nodes</key>
 					<array>
+						<string>../.swiftlint.yml</string>
 						<string>AppDelegate.swift</string>
 						<string>SceneDelegate.swift</string>
 						<string>Assembler/Assembler.swift</string>
@@ -251,6 +258,11 @@
 					</array>
 					<key>Definitions</key>
 					<dict>
+						<key>../.swiftlint.yml</key>
+						<dict>
+							<key>Path</key>
+							<string>.swiftlint.yml</string>
+						</dict>
 						<key>Base.lproj/Main.storyboard</key>
 						<dict>
 							<key>Path</key>
@@ -384,5 +396,28 @@
 		<key>BundleIdentifier</key>
 		<string>com.apple.dt.IDEKit</string>
 	</dict>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>Name</key>
+					<string>SwiftLint</string>
+					<key>ShellPath</key>
+					<string>/bin/sh</string>
+					<key>ShellScript</key>
+					<string>export PATH=&quot;$PATH:/opt/homebrew/bin&quot;
+if which swiftlint &gt; /dev/null; then
+  swiftlint --strict
+else
+  echo &quot;warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint&quot;
+fi</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

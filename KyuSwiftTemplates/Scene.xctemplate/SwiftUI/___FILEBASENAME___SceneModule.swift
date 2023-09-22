@@ -12,14 +12,15 @@ import UIKit
 public struct ___VARIABLE_sceneName___SceneModule: SceneModuleProtocol {
 	public static var moduleName: String = "___PROJECTNAME___.___VARIABLE_sceneName___SceneModule"
 	
-	public func build(resolver: ResolverProtocol, parameters: [String: Any]?) -> UIViewController? {
+	public func build(
+		resolver: ResolverProtocol,
+		parameters: [String: Any]
+	) throws -> UIViewController {
 		// Services
-		guard let transitionCoordinator = resolver.resolve(
+		let transitionCoordinator = try resolver.resolve(
 			TransitionCoordinatorProtocol.self,
 			name: "___PROJECTNAME___.TransitionCoordinator"
-		) else {
-			return nil
-		}
+		)
 		
 		// ViewController
 		let viewController = ___VARIABLE_sceneName___ViewController()

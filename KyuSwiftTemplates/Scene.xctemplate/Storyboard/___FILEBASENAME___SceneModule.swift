@@ -13,14 +13,15 @@ public struct ___VARIABLE_sceneName___SceneModule: SceneModuleProtocol {
 	private var nibName = String(describing: ___VARIABLE_sceneName___ViewController.self)
 	private var bundle: Bundle? = Bundle(for: ___VARIABLE_sceneName___ViewController.self)
 	
-	public func build(resolver: ResolverProtocol, parameters: [String: Any]?) -> UIViewController? {
+	public func build(
+		resolver: ResolverProtocol,
+		parameters: [String: Any]
+	) throws -> UIViewController {
 		// Services
-		guard let transitionCoordinator = resolver.resolve(
+		let transitionCoordinator = try resolver.resolve(
 			TransitionCoordinatorProtocol.self,
 			name: "___PROJECTNAME___.TransitionCoordinator"
-		) else {
-			return nil
-		}
+		)
 		
 		// ViewController
 		let viewController = ___VARIABLE_sceneName___ViewController(nibName: nibName, bundle: bundle)
