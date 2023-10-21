@@ -18,21 +18,25 @@ struct ___VARIABLE_sceneName___View: View {
 				viewController?.onAppear()
 			}
 	}
+	
+	// MARK: VIEWMODEL
+	struct ViewModel {
+		var title: String = "___VARIABLE_sceneName___View"
+	}
+}
+
+// MARK: - VIEWMODEL
+extension ___VARIABLE_sceneName___View.ViewModel {
+	static var preview: ___VARIABLE_sceneName___View.ViewModel {
+		___VARIABLE_sceneName___View.ViewModel()
+	}
 }
 
 // MARK: - PREVIEW
 struct ___VARIABLE_sceneName___View_Previews: PreviewProvider {
 	static var previews: some View {
 		let viewController = ___VARIABLE_sceneName___ViewController()
-		let viewModel = ___VARIABLE_sceneName___ViewModel(
-			title: "___VARIABLE_sceneName___View"
-		)
-		viewController.viewModel = viewModel
+		viewController.viewModel = ___VARIABLE_sceneName___View.ViewModel.preview
 		return ___VARIABLE_sceneName___View(viewController: viewController)
 	}
-}
-
-// MARK: - VIEW MODEL
-struct ___VARIABLE_sceneName___ViewModel {
-	var title: String = ""
 }

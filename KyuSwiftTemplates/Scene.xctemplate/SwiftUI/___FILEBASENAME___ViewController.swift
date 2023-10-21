@@ -18,7 +18,7 @@ class ___VARIABLE_sceneName___ViewController: ___VARIABLE_sceneName___ViewContro
 	var interactor: ___VARIABLE_sceneName___InteractorProtocol?
 	var router: ___VARIABLE_sceneName___RouterProtocol?
 	
-	@Published var viewModel = ___VARIABLE_sceneName___ViewModel()
+	@Published var viewModel = ___VARIABLE_sceneName___View.ViewModel()
 	
 	func onAppear() {
 		init___VARIABLE_sceneName___ViewController()
