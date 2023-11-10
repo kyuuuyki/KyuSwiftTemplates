@@ -31,7 +31,7 @@ class ___VARIABLE_sceneName___WorkerTests: XCTestCase {
 
 // MARK: - TEST SOMETHING
 extension ___VARIABLE_sceneName___WorkerTests {
-	func testSomething() {
+	func testGet___VARIABLE_sceneName___Detail() {
 		// MARK: Given
 		
 		// MARK: When

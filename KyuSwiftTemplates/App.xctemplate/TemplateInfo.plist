@@ -93,7 +93,11 @@
 						<string>AppDelegate.swift</string>
 						<string>SceneDelegate.swift</string>
 						<string>Assembler/Assembler.swift</string>
-						<string>Assembler/TransitionCoordinator.swift</string>
+						<string>Assembler/Controllers/AppNavigationController.swift</string>
+						<string>Assembler/Controllers/AppTabBarController.swift</string>
+						<string>Assembler/Controllers/AppWindowManager.swift</string>
+						<string>Assembler/TransitionCoordinator/NavigationType.swift</string>
+						<string>Assembler/TransitionCoordinator/TransitionCoordinator.swift</string>
 						<string>Scene/___VARIABLE_sceneName:identifier___Interactor.swift</string>
 						<string>Scene/___VARIABLE_sceneName:identifier___Model.swift</string>
 						<string>Scene/___VARIABLE_sceneName:identifier___Presenter.swift</string>
@@ -138,14 +142,55 @@
 							<key>Path</key>
 							<string>Assembler/Assembler.swift</string>
 						</dict>
-						<key>Assembler/TransitionCoordinator.swift</key>
+						<key>Assembler/Controllers/AppNavigationController.swift</key>
 						<dict>
 							<key>Group</key>
 							<array>
 								<string>Assembler</string>
+								<string>Controllers</string>
 							</array>
 							<key>Path</key>
-							<string>Assembler/TransitionCoordinator.swift</string>
+							<string>Assembler/Controllers/AppNavigationController.swift</string>
+						</dict>
+						<key>Assembler/Controllers/AppTabBarController.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>Controllers</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/Controllers/AppTabBarController.swift</string>
+						</dict>
+						<key>Assembler/Controllers/AppWindowManager.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>Controllers</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/Controllers/AppWindowManager.swift</string>
+						</dict>
+						<key>Assembler/TransitionCoordinator/NavigationType.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>TransitionCoordinator</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/TransitionCoordinator/NavigationType.swift</string>
+						</dict>
+						<key>Assembler/TransitionCoordinator/TransitionCoordinator.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>TransitionCoordinator</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/TransitionCoordinator/TransitionCoordinator.swift</string>
 						</dict>
 						<key>Scene/___VARIABLE_sceneName:identifier___Interactor.swift</key>
 						<dict>
@@ -244,7 +289,11 @@
 						<string>AppDelegate.swift</string>
 						<string>SceneDelegate.swift</string>
 						<string>Assembler/Assembler.swift</string>
-						<string>Assembler/TransitionCoordinator.swift</string>
+						<string>Assembler/Controllers/AppNavigationController.swift</string>
+						<string>Assembler/Controllers/AppTabBarController.swift</string>
+						<string>Assembler/Controllers/AppWindowManager.swift</string>
+						<string>Assembler/TransitionCoordinator/NavigationType.swift</string>
+						<string>Assembler/TransitionCoordinator/TransitionCoordinator.swift</string>
 						<string>Scene/___VARIABLE_sceneName:identifier___Interactor.swift</string>
 						<string>Scene/___VARIABLE_sceneName:identifier___Model.swift</string>
 						<string>Scene/___VARIABLE_sceneName:identifier___Presenter.swift</string>
@@ -289,14 +338,55 @@
 							<key>Path</key>
 							<string>Assembler/Assembler.swift</string>
 						</dict>
-						<key>Assembler/TransitionCoordinator.swift</key>
+						<key>Assembler/Controllers/AppNavigationController.swift</key>
 						<dict>
 							<key>Group</key>
 							<array>
 								<string>Assembler</string>
+								<string>Controllers</string>
 							</array>
 							<key>Path</key>
-							<string>Assembler/TransitionCoordinator.swift</string>
+							<string>Assembler/Controllers/AppNavigationController.swift</string>
+						</dict>
+						<key>Assembler/Controllers/AppTabBarController.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>Controllers</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/Controllers/AppTabBarController.swift</string>
+						</dict>
+						<key>Assembler/Controllers/AppWindowManager.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>Controllers</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/Controllers/AppWindowManager.swift</string>
+						</dict>
+						<key>Assembler/TransitionCoordinator/NavigationType.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>TransitionCoordinator</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/TransitionCoordinator/NavigationType.swift</string>
+						</dict>
+						<key>Assembler/TransitionCoordinator/TransitionCoordinator.swift</key>
+						<dict>
+							<key>Group</key>
+							<array>
+								<string>Assembler</string>
+								<string>TransitionCoordinator</string>
+							</array>
+							<key>Path</key>
+							<string>Assembler/TransitionCoordinator/TransitionCoordinator.swift</string>
 						</dict>
 						<key>Scene/___VARIABLE_sceneName:identifier___Interactor.swift</key>
 						<dict>

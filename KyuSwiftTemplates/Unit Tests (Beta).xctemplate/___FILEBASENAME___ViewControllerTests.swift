@@ -40,11 +40,11 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
 	
 	// MARK: TEST DOUBLES
 	private class ___VARIABLE_sceneName___InteractorSpy: ___VARIABLE_sceneName___InteractorProtocol {
-		var doSomethingCalled = false
-		var doSomethingRequest: ___VARIABLE_sceneName___Model.Something.Request!
-		func doSomething(request: ___VARIABLE_sceneName___Model.Something.Request) {
-			doSomethingCalled = true
-			doSomethingRequest = request
+		var get___VARIABLE_sceneName___DetailCalled = false
+		var get___VARIABLE_sceneName___DetailRequest: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Request!
+		func get___VARIABLE_sceneName___Detail(request: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Request) {
+			get___VARIABLE_sceneName___DetailCalled = true
+			get___VARIABLE_sceneName___DetailRequest = request
 		}
 	}
 	
@@ -54,7 +54,7 @@ class ___VARIABLE_sceneName___ViewControllerTests: XCTestCase {
 
 // MARK: - TEST SHOULD DO SOMETHING WHEN VIEW IS LOADED
 extension ___VARIABLE_sceneName___ViewControllerTests {
-	func testShouldDoSomethingWhenViewIsLoaded() {
+	func testShouldDoGet___VARIABLE_sceneName___DetailWhenViewIsLoaded() {
 		// MARK: Given
 		loadView()
 		
@@ -64,20 +64,20 @@ extension ___VARIABLE_sceneName___ViewControllerTests {
 		// MARK: When
 		
 		// MARK: Then
-		XCTAssertTrue(interactor.doSomethingCalled, "viewDidLoad() should ask the interactor to do something")
+		XCTAssertTrue(interactor.get___VARIABLE_sceneName___DetailCalled, "viewDidLoad() should ask the interactor to do something")
 	}
 }
 
 // MARK: - TEST DISPLAY SOMETHING
 extension ___VARIABLE_sceneName___ViewControllerTests {
-	func testDisplaySomething() {
+	func testDisplayGet___VARIABLE_sceneName___Detail() {
 		// MARK: Given
 		loadView()
 		
-		let viewModel = ___VARIABLE_sceneName___Model.Something.ViewModel()
+		let viewModel = ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.ViewModel()
 		
 		// MARK: When
-		sut.displaySomething(viewModel: viewModel)
+		sut.displayGet___VARIABLE_sceneName___Detail(viewModel: viewModel)
 		
 		// MARK: Then
 		// XCTAssertEqual(sut.nameTextField.text, "")

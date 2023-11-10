@@ -7,7 +7,7 @@ import Foundation
 
 // MARK: - BUSINESS LOGIC
 protocol ___VARIABLE_sceneName___InteractorProtocol {
-	func doSomething(request: ___VARIABLE_sceneName___Model.Something.Request)
+	func get___VARIABLE_sceneName___Detail(request: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Request)
 }
 
 // MARK: - INTERACTOR
@@ -24,12 +24,12 @@ class ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___InteractorProt
 	}
 }
 
-// MARK: - DO SOMETHING
+// MARK: - GET DETAIL
 extension ___VARIABLE_sceneName___Interactor {
-	func doSomething(request: ___VARIABLE_sceneName___Model.Something.Request) {
+	func get___VARIABLE_sceneName___Detail(request: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Request) {
 		worker?.doSomeWork()
 		
-		let response = ___VARIABLE_sceneName___Model.Something.Response()
-		presenter?.presentSomething(response: response)
+		let response = ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Response()
+		presenter?.presentGet___VARIABLE_sceneName___Detail(response: response)
 	}
 }

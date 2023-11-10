@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - DISPLAY LOGIC
 protocol ___VARIABLE_sceneName___ViewControllerProtocol: AnyObject {
-	func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel)
+	func displayGet___VARIABLE_sceneName___Detail(viewModel: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.ViewModel)
 }
 
 // MARK: - VIEW CONTROLLER
@@ -20,20 +20,36 @@ class ___VARIABLE_sceneName___ViewController: ___VARIABLE_sceneName___ViewContro
 	
 	@Published var viewModel = ___VARIABLE_sceneName___View.ViewModel()
 	
+	// MARK: PRIVATE
+	private var isInitialized = false
+	private var refreshableContinuation: CheckedContinuation<Void, Never>?
+	
 	func onAppear() {
 		init___VARIABLE_sceneName___ViewController()
 	}
+	
+	// MARK: ACTIONS
+	func refresh() async {
+		await withCheckedContinuation { continuation in
+			self.refreshableContinuation = continuation
+			self.get___VARIABLE_sceneName___Detail()
+		}
+	}
 }
 
-// MARK: - DO SOMETHING
+// MARK: - GET DETAIL
 extension ___VARIABLE_sceneName___ViewController {
-	func doSomething() {
-		let request = ___VARIABLE_sceneName___Model.Something.Request()
-		interactor?.doSomething(request: request)
+	func get___VARIABLE_sceneName___Detail() {
+		let request = ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Request()
+		interactor?.get___VARIABLE_sceneName___Detail(request: request)
 	}
 	
-	func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel) {
+	func displayGet___VARIABLE_sceneName___Detail(viewModel: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.ViewModel) {
 		self.viewModel.title = "___VARIABLE_sceneName___ViewController"
+		
+		// End Refreshing
+		self.refreshableContinuation?.resume()
+		self.refreshableContinuation = nil
 	}
 }
 
@@ -41,6 +57,9 @@ extension ___VARIABLE_sceneName___ViewController {
 private extension ___VARIABLE_sceneName___ViewController {
 	// MARK: INIT
 	func init___VARIABLE_sceneName___ViewController() {
-		doSomething()
+		guard !isInitialized else { return }
+		isInitialized = true
+		
+		get___VARIABLE_sceneName___Detail()
 	}
 }

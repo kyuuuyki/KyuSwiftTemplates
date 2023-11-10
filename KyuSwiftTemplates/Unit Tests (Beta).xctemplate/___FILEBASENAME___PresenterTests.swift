@@ -28,30 +28,30 @@ class ___VARIABLE_sceneName___PresenterTests: XCTestCase {
 	
 	// MARK: TEST DOUBLES
 	private class ___VARIABLE_sceneName___ViewControllerSpy: ___VARIABLE_sceneName___ViewControllerProtocol {
-		var displaySomethingCalled = false
-		var displaySomethingViewModel: ___VARIABLE_sceneName___Model.Something.ViewModel!
-		func displaySomething(viewModel: ___VARIABLE_sceneName___Model.Something.ViewModel) {
-			displaySomethingCalled = true
-			displaySomethingViewModel = viewModel
+		var displayGet___VARIABLE_sceneName___DetailCalled = false
+		var displayGet___VARIABLE_sceneName___DetailViewModel: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.ViewModel!
+		func displayGet___VARIABLE_sceneName___Detail(viewModel: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.ViewModel) {
+			displayGet___VARIABLE_sceneName___DetailCalled = true
+			displayGet___VARIABLE_sceneName___DetailViewModel = viewModel
 		}
 	}
 }
 
 // MARK: - PRESENT SOMETHING
 extension ___VARIABLE_sceneName___PresenterTests {
-	func testPresentSomething() {
+	func testPresentGet___VARIABLE_sceneName___Detail() {
 		// MARK: Given
 		let viewController = ___VARIABLE_sceneName___ViewControllerSpy()
 		sut.viewController = viewController
-		let response = ___VARIABLE_sceneName___Model.Something.Response()
+		let response = ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Response()
 		
 		// MARK: When
-		sut.presentSomething(response: response)
+		sut.presentGet___VARIABLE_sceneName___Detail(response: response)
 		
 		// MARK: Then
-		XCTAssertTrue(viewController.displaySomethingCalled)
+		XCTAssertTrue(viewController.displayGet___VARIABLE_sceneName___DetailCalled)
 		XCTAssertEqual(
-			viewController.displaySomethingViewModel.something,
+			viewController.displayGet___VARIABLE_sceneName___DetailViewModel.something,
 			something
 		)
 	}

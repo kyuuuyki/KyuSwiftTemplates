@@ -17,7 +17,10 @@ public final class Assembler: AssemblerProtocol {
 	
 	// MARK: PRIVATE
 	private init() {}
-	private static let shared = Assembler()
+	internal static let shared = Assembler()
+	
+	// MARK: WINDOW MANAGER
+	let windowManager = AppWindowManager()
 }
 
 public extension Assembler {
@@ -43,12 +46,15 @@ public extension Assembler {
 	}
 	
 	func configureRootViewController(window: UIWindow?) {
+		guard let window else { return }
+		windowManager.configureRootWindow(window: window)
+		
 		let viewController = try? resolver
 			.resolve(
 				SceneModuleProtocol.self,
 				name: ___VARIABLE_sceneName___SceneModule.moduleName
 			)
 			.build(resolver: resolver)
-		window?.rootViewController = viewController
+		window.rootViewController = viewController
 	}
 }

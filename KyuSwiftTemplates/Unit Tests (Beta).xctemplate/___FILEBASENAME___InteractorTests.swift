@@ -28,11 +28,11 @@ class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
 	
 	// MARK: TEST DOUBLES
 	private class ___VARIABLE_sceneName___PresenterSpy: ___VARIABLE_sceneName___PresenterProtocol {
-		var presentSomethingExpectation = XCTestExpectation()
-		var presentSomethingResponse: ___VARIABLE_sceneName___Model.Something.Response!
-		func presentSomething(response: ___VARIABLE_sceneName___Model.Something.Response) {
-			presentSomethingResponse = response
-			presentSomethingExpectation.fulfill()
+		var presentGet___VARIABLE_sceneName___DetailExpectation = XCTestExpectation()
+		var presentGet___VARIABLE_sceneName___DetailResponse: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Response!
+		func presentGet___VARIABLE_sceneName___Detail(response: ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Response) {
+			presentGet___VARIABLE_sceneName___DetailResponse = response
+			presentGet___VARIABLE_sceneName___DetailExpectation.fulfill()
 		}
 	}
 	
@@ -46,7 +46,7 @@ class ___VARIABLE_sceneName___InteractorTests: XCTestCase {
 
 // MARK: - TEST DO SOMETHING
 extension ___VARIABLE_sceneName___InteractorTests {
-	func testDoSomething() {
+	func testDoGet___VARIABLE_sceneName___Detail() {
 		// MARK: Given
 		let presenter = ___VARIABLE_sceneName___PresenterSpy()
 		sut.presenter = presenter
@@ -54,13 +54,13 @@ extension ___VARIABLE_sceneName___InteractorTests {
 		let worker = ___VARIABLE_sceneName___WorkerMock()
 		sut.worker = worker
 		
-		let request = ___VARIABLE_sceneName___Model.Something.Request()
+		let request = ___VARIABLE_sceneName___Model.Get___VARIABLE_sceneName___Detail.Request()
 		
 		// MARK: When
-		sut.doSomething(request: request)
+		sut.get___VARIABLE_sceneName___Detail(request: request)
 		
 		// MARK: Then
-		wait(for: [presentSomethingExpectation], timeout: 5)
+		wait(for: [presentGet___VARIABLE_sceneName___DetailExpectation], timeout: 5)
 		
 		// Worker
 		XCTAssertTrue(worker.doSomeWorkCalled)
@@ -68,6 +68,6 @@ extension ___VARIABLE_sceneName___InteractorTests {
 		// DataStore
 		
 		// Presenter
-		XCTAssertTrue(presenter.presentSomethingResponse.someValue)
+		XCTAssertTrue(presenter.presentGet___VARIABLE_sceneName___DetailResponse.someValue)
 	}
 }

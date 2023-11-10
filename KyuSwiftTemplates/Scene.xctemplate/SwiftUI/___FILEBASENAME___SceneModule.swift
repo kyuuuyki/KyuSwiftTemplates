@@ -27,13 +27,18 @@ public struct ___VARIABLE_sceneName___SceneModule: SceneModuleProtocol {
 		
 		let worker = ___VARIABLE_sceneName___Worker()
 		let presenter = ___VARIABLE_sceneName___Presenter(viewController: viewController)
-		let interactor = ___VARIABLE_sceneName___Interactor(presenter: presenter, worker: worker)
+		let interactor = ___VARIABLE_sceneName___Interactor(
+			presenter: presenter,
+			worker: worker
+		)
 		let router = ___VARIABLE_sceneName___Router(transitionCoordinator: transitionCoordinator)
 		viewController.interactor = interactor
 		viewController.router = router
 		
 		let view = ___VARIABLE_sceneName___View(viewController: viewController)
 		let hostingController = UIHostingController(rootView: view)
+		hostingController.navigationItem.hidesBackButton = true
+		
 		viewController.hostingController = hostingController
 		return hostingController
 	}

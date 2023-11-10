@@ -25,7 +25,7 @@ struct ___VARIABLE_viewName___View: View {
 // MARK: - VIEWMODEL
 extension ___VARIABLE_viewName___View.ViewModel {
 	static var preview: ___VARIABLE_viewName___View.ViewModel {
-		___VARIABLE_viewName___View.ViewModel(
+		.init(
 			title: "___VARIABLE_viewName___View"
 		)
 	}
@@ -34,7 +34,6 @@ extension ___VARIABLE_viewName___View.ViewModel {
 // MARK: - PREVIEW
 struct ___VARIABLE_viewName___View_Previews: PreviewProvider {
 	static var previews: some View {
-		let viewModel = ___VARIABLE_viewName___View.ViewModel.preview
-		return ___VARIABLE_viewName___View(viewModel: viewModel)
+		___VARIABLE_viewName___View(viewModel: .preview)
 	}
 }
